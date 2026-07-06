@@ -1,0 +1,22 @@
+{
+  "name": "helix",
+  "version": "0.1.1",
+  "description": "Connect Codex to a scoped H E L I X instance.",
+  "author": {
+    "name": "H E L I X"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "H E L I X",
+    "shortDescription": "Use scoped H E L I X tools from Codex.",
+    "longDescription": "Connects Codex terminal sessions to H E L I X through user-controlled scoped API tokens. Codex must use /api/codex/* endpoints so H E L I X Settings can enforce tool access.",
+    "developerName": "H E L I X",
+    "category": "Productivity",
+    "capabilities": [
+      "todos",
+      "email",
+      "scoped-api"
+    ],
+    "defaultPrompt": "Use H E L I X only through configured scoped access. Check capabilities before reading or writing data."
+  }
+}
