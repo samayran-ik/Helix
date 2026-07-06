@@ -10,7 +10,7 @@
 
 
 <p align="center">
-  <img src="docs/helix-browser.jpg" alt="H E L I X interface">
+  <img src="docs/helix-browser.png" alt="H E L I X interface">
 </p>
 
 ---
