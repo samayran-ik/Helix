@@ -1,75 +1,39 @@
-# Helix Project Instructions
+# HELIX Development Rules
 
-## Environment
+Project: HELIX Personal AI Assistant
 
-- Operating System: Windows 11
-- Shell: PowerShell
-- Never assume Linux.
-- Never use bash syntax.
+## Stack
+- Python (FastAPI)
+- Electron
+- HTML/CSS/JavaScript
+- Ollama
+- Gemini fallback
 
-## Shell Commands
+## Rules
 
-Use ONLY PowerShell commands.
+- Never redesign the UI unless asked.
+- Preserve existing layouts.
+- Preserve existing component hierarchy.
+- Preserve spacing and typography.
+- Prefer editing existing files over creating new ones.
+- Search the repository before making changes.
+- Keep code style consistent.
+- Never remove existing functionality.
+- Make the smallest possible change.
+- Explain modified files after finishing.
 
-Correct:
-- Get-ChildItem
-- Get-Content
-- Select-String
-- Test-Path
-- Copy-Item
-- Move-Item
-- Remove-Item
-- Invoke-WebRequest
+## Theme Rules
 
-Never use:
-- ls
-- grep
-- head
-- tail
-- sed
-- awk
-- xargs
-- find
-- cat
-- pwd
+Default theme:
+- OLED black
+- White accent
+- Dark gray borders
 
-## Tool Usage
+Never modify optional themes unless requested.
 
-Never call:
-- run_command
-- todo
-- dir
+## Coding Rules
 
-Only use tools that actually exist.
-
-If a tool is unavailable, continue with shell commands.
-
-## Development Workflow
-
-1. Inspect the repository.
-2. Locate the relevant files.
-3. Edit only the required files.
-4. Preserve project architecture.
-5. Never ask unnecessary questions.
-6. Never stop to create a plan.
-7. Finish the implementation before explaining it.
-
-## Installer Rules
-
-When modifying the installer:
-
-- Detect Python.
-- Download the latest Python from python.org if missing.
-- Install silently.
-- Verify PATH.
-- Continue installation automatically.
-- Show progress for every installation step.
-- Never bundle Python inside the installer.
-
-## Code Style
-
-- Production-ready.
-- No placeholder code.
-- No TODO comments.
-- No duplicate code.
-- Explain completed changes after implementation.
+- Don't ask unnecessary questions.
+- Don't switch tasks.
+- Don't invent features.
+- Finish one task completely before another.
