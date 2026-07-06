@@ -61,15 +61,6 @@ Help is welcome. The best entry points are fresh-install testing, provider setup
 
 H E L I X is a self-hosted workspace with powerful local tools. Keep auth enabled, keep private data out of Git, and do not expose raw model/service ports publicly. Deployment details are in the [setup guide](docs/setup.md#security-notes).
 
-## Star History
-
-<a href="https://www.star-history.com/?repos=pewdiepie-archdaemon%2Fhelix&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=pewdiepie-archdaemon/HELIX&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=pewdiepie-archdaemon/HELIX&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=pewdiepie-archdaemon/HELIX&type=date&legend=top-left" />
- </picture>
-</a>
 
 ## License
 
