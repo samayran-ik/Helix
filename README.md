@@ -25,18 +25,7 @@
 
 ## Quick Start
 
-> `dev` is the default branch and gets the newest changes first. Use [`main`](https://github.com/pewdiepie-archdaemon/HELIX/tree/main) if you want the more curated branch.
 
-```bash
-git clone https://github.com/samayran-ik/Helix.git
-cd helix
-cp .env.example .env
-docker compose up -d --build
-```
-
-Open `http://localhost:7000` when the containers are healthy. The first admin password is printed in `docker compose logs helix`.
-
-Native installs, GPU notes, Windows/macOS instructions, HTTPS, and configuration live in the [setup guide](docs/setup.md).
 
 ## Features
 
@@ -49,13 +38,8 @@ Native installs, GPU notes, Windows/macOS instructions, HTTPS, and configuration
 - **Notes, Tasks + Calendar** — reminders, todos, scheduled agent tasks, and CalDAV sync.
 - **Extras** — gallery/image editor, themes, uploads, web search, presets, sessions, and 2FA.
 
-## Demo
 
-A full hover-to-play tour lives on the landing page: [`docs/index.html`](docs/index.html).
 
-## Contributing
-
-Help is welcome. The best entry points are fresh-install testing, provider setup bugs, mobile/editor polish, docs, and small focused refactors. See [CONTRIBUTING.md](CONTRIBUTING.md) and [ROADMAP.md](ROADMAP.md).
 
 ## Security
 
