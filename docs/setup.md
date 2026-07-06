@@ -257,7 +257,7 @@ do not run on macOS. MLX-only models are not served by H E L I X.
 server; safe to re-run):
 
 ```powershell
-git clone https://github.com/pewdiepie-archdaemon/HELIX.git
+git clone https://github.com/samayran-ik/Helix.git
 cd helix
 powershell -ExecutionPolicy Bypass -File .\launch-windows.ps1
 ```
@@ -265,7 +265,7 @@ powershell -ExecutionPolicy Bypass -File .\launch-windows.ps1
 Or do it by hand:
 
 ```powershell
-git clone https://github.com/pewdiepie-archdaemon/HELIX.git
+git clone https://github.com/samayran-ik/Helix.git
 cd helix
 py -3.11 -m venv venv
 venv\Scripts\Activate.ps1

@@ -28,7 +28,7 @@
 > `dev` is the default branch and gets the newest changes first. Use [`main`](https://github.com/pewdiepie-archdaemon/HELIX/tree/main) if you want the more curated branch.
 
 ```bash
-git clone https://github.com/pewdiepie-archdaemon/HELIX.git
+git clone https://github.com/samayran-ik/Helix.git
 cd helix
 cp .env.example .env
 docker compose up -d --build
