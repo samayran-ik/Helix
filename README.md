@@ -6,16 +6,8 @@
   A self-hosted AI workspace for chat, agents, research, documents, email, notes, calendar, and local model workflows.
 </p>
 
-<p align="center">
-  <a href="#quick-start">Quick Start</a> ·
-  <a href="docs/setup.md">Setup Guide</a> ·
-  <a href="CONTRIBUTING.md">Contributing</a> ·
-  <a href="ROADMAP.md">Roadmap</a>
-</p>
 
-<p align="center">
-  <a href="https://repology.org/project/helix-ai/versions"><img src="https://repology.org/badge/vertical-allrepos/helix-ai.svg" alt="Packaging status"></a>
-</p>
+
 
 <p align="center">
   <img src="docs/helix-browser.jpg" alt="H E L I X interface">
@@ -23,7 +15,6 @@
 
 ---
 
-## Quick Start
 
 
 
