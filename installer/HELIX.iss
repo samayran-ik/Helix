@@ -44,6 +44,8 @@ Name: "launchstartup"; Description: "Launch HELIX when Windows starts"; GroupDes
 
 [Files]
 Source: "{#AppBuildDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\requirements.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\requirements-optional.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "scripts\Install-Helix.ps1"; DestDir: "{app}\installer\scripts"; Flags: ignoreversion
 Source: "scripts\Uninstall-Helix.ps1"; DestDir: "{app}\installer\scripts"; Flags: ignoreversion
 
@@ -52,7 +54,7 @@ Name: "{group}\HELIX"; Filename: "{app}\HELIX.exe"; WorkingDir: "{app}"; IconFil
 Name: "{autodesktop}\HELIX"; Filename: "{app}\HELIX.exe"; WorkingDir: "{app}"; IconFilename: "{app}\HELIX.exe"; Tasks: desktopicon
 
 [Run]
-Filename: "{cmd}"; Parameters: "/c start ""HELIX Installer"" /wait powershell.exe -NoProfile -ExecutionPolicy Bypass -File ""{app}\installer\scripts\Install-Helix.ps1"" -InstallDir ""{app}"" -LaunchAtStartup ""{code:GetStartupFlag}"""; StatusMsg: "Completing HELIX setup..."; Flags: waituntilterminated; Check: IsInteractiveInstall
+Filename: "powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -File ""{app}\installer\scripts\Install-Helix.ps1"" -InstallDir ""{app}"" -LaunchAtStartup ""{code:GetStartupFlag}"""; StatusMsg: "Completing HELIX setup..."; Flags: waituntilterminated runhidden; Check: IsInteractiveInstall
 Filename: "powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -File ""{app}\installer\scripts\Install-Helix.ps1"" -InstallDir ""{app}"" -LaunchAtStartup ""{code:GetStartupFlag}"" -Silent"; StatusMsg: "Completing HELIX setup..."; Flags: waituntilterminated runhidden; Check: IsSilentInstall
 
 [UninstallRun]

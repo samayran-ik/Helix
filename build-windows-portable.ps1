@@ -6,7 +6,7 @@
     dist\HELIX\HELIX.exe
     dist\H E L I X\static\...
     dist\H E L I X\scripts\...
-    dist\H E L I X\mcp_servers\...
+    dist\H E L I X\mcp_servers$...
     dist\H E L I X\services\hwfit\data\...
 
   The app then keeps using its normal filesystem layout when frozen.
@@ -50,6 +50,20 @@ Write-Step "Installing build dependencies"
 & $pyExe -m pip install --upgrade pip --quiet
 & $pyExe -m pip install -r requirements.txt pyinstaller pystray Pillow
 if ($LASTEXITCODE -ne 0) { Fail "Dependency install failed." }
+
+Write-Step "Ensuring no background HELIX processes are locking the build directory"
+$runningHelix = Get-Process -Name "HELIX" -ErrorAction SilentlyContinue
+if ($runningHelix) {
+    Write-Host "Stopping running HELIX processes..." -ForegroundColor Yellow
+    $runningHelix | Stop-Process -Force -ErrorAction SilentlyContinue
+    Start-Sleep -Seconds 2
+}
+$runningPython = Get-Process -Name "python" -ErrorAction SilentlyContinue | Where-Object { $_.Path -like "*dist\HELIX*" }
+if ($runningPython) {
+    Write-Host "Stopping running python processes inside dist directory..." -ForegroundColor Yellow
+    $runningPython | Stop-Process -Force -ErrorAction SilentlyContinue
+    Start-Sleep -Seconds 2
+}
 
 Write-Step "Building portable exe bundle"
 Remove-Item -Recurse -Force build, dist -ErrorAction SilentlyContinue

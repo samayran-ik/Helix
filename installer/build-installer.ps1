@@ -36,7 +36,8 @@ function Find-InnoCompiler {
         (Join-Path $env:LOCALAPPDATA "Programs\Inno Setup 6\ISCC.exe")
     ) | Where-Object { $_ -and (Test-Path -LiteralPath $_) }
 
-    if ($candidates.Count -gt 0) { return $candidates[0] }
+    $found = @($candidates)
+    if ($found.Count -gt 0) { return $found[0] }
     Fail "Inno Setup 6 compiler (ISCC.exe) was not found. Install Inno Setup 6, then run this build again."
 }
 
